@@ -4,7 +4,6 @@
     pip install pandas
     pip install matplotib
     or Jupyter
-
 """
 
 import pylab as mp
