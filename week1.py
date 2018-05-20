@@ -20,7 +20,7 @@ print(subset.head())
 sorted = subset.sort_values(by=["Salary"])
 print(sorted.head())
 
-data.groupby(["Department"]).sum()
+print(data.groupby(["Department"]).sum())
 
 # uncomment following in Jupyter
 #mp.plot(sorted)
