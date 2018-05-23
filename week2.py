@@ -47,6 +47,6 @@ data['activity_year'] = pd.to_datetime(data['activity_date'], format='%Y-%m-%d')
 city = pd.pivot_table(data, values = 'score', index = 'facility_city', columns = 'activity_year', aggfunc=np.mean)
 city_1 = city[pd.notnull(city['2015'])]
 city_2 = city_1[pd.notnull(city_1['2017'])]
-city_2['improvement'] = (city_2['2017']-city_2['2015'])/city_2['2015']
+city_2['improvement'] = city_2['2017'] - city_2['2015']
 top_city = city_2.nlargest(1, 'improvement')
 print(top_city)
